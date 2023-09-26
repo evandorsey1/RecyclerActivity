@@ -6,22 +6,24 @@ import androidx.recyclerview.widget.RecyclerView
 
 // Step 3: Complete adapter implementation
 
-class NumberDisplayAdapter : RecyclerView.Adapter<NumberDisplayAdapter.NumberViewHolder>() {
-    /* Step 3a: Provide Adapter Parent */
+class NumberDisplayAdapter(private val numbers : Array<Int>) : RecyclerView.Adapter<NumberDisplayAdapter.NumberViewHolder>() { /* Step 3a: Provide Adapter Parent */
+
 
 
     class NumberViewHolder (val textView: TextView) : RecyclerView.ViewHolder (textView) {}
 
 
 
+
+    //Step 3b: Complete function definitions for adapter
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NumberDisplayAdapter.NumberViewHolder {
-        TODO("Not yet implemented")
+        return NumberViewHolder(TextView(parent.context))
     }
 
 
 
     override fun onBindViewHolder(holder: NumberDisplayAdapter.NumberViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        holder.textView.text = numbers[position].toString()
     }
 
 
@@ -29,20 +31,8 @@ class NumberDisplayAdapter : RecyclerView.Adapter<NumberDisplayAdapter.NumberVie
 
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return numbers.size
     }
-
-
-
-
-
-
-
-    //Step 3b: Complete function definitions for adapter
-
-
-
-
 
 
 
