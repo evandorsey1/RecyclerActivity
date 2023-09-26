@@ -28,8 +28,6 @@ class NumberDisplayAdapter(private val numbers : Array<Int>) : RecyclerView.Adap
 
 
 
-
-
     override fun getItemCount(): Int {
         return numbers.size
     }

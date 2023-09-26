@@ -32,8 +32,10 @@ class MainActivity : AppCompatActivity() {
 
 
         //Step 4: Provide a RecyclerView.Adapter
-        //recyclerView.adapter = NumberDisplayAdapter
-        //recyclerView.layoutManager = LinearLayoutManager(this)
+        val numbers = arrayOf(1, 2, 3, 4, 5)
+
+
+        recyclerView.adapter = NumberDisplayAdapter(numbers)
 
     }
 }
